@@ -5,9 +5,9 @@ $(function(){
     });
 
     $('#form-start-quiz').on('submit',function(){
-        var nama = $('input[name="nama"]').val();
-        $('.nama').text(nama);
-        $('.form-nama').hide().next().show();
+        var name = $('input[name="name"]').val();
+        $('.name').text(name);
+        $('.form-name').hide().next().show();
         $('html').scrollTop(1000);
         startQuiz();
         return false;
@@ -26,7 +26,7 @@ $(function(){
     $(document).on('click','.btn-start-over',function(){
         $('.chatbox').hide().find('.item').not('.default').remove();
         $('.chatbox').find('.item').removeClass('confirm').find('.btn').removeClass('active');
-        $('.form-nama').show();
+        $('.form-name').show();
     });
 
     var template = ''+
@@ -99,17 +99,17 @@ $(function(){
             console.log(total);
             $('.chatbox').append(template).find('.item').eq(index+1).find('.text').html(question[index].question);
         } else{
-            var nama = $('input[name="nama"]').val();
+            var nama = $('input[name="name"]').val();
             if(total < 8){
-                result = '<strong>'+nama+ '</strong>, You have a <strong> Low Risk</strong>. ';
+                result = '<strong>'+name+ '</strong>, You have a <strong> Low Risk</strong>.';
                 result = result+ 'Keep healthy, okay. and if this step can become a daily habit, it certainly helps change healthy lifestyles from the effects of this post pandemic COVID19.'
             }
             if(total > 7 && total < 15){
-                result = '<strong>'+nama+ '</strong>,You have a <strong> Medium Risk</strong>. ';
+                result = '<strong>'+name+ '</strong>,You have a <strong> Medium Risk</strong>.';
                 result = result+ 'Do isolation immediately. keep healthy.'
             }
             if(total > 14 && total < 22){
-                result = '<strong>'+nama+ '</strong>, You have a <strong> High Risk</strong>. ';
+                result = '<strong>'+name+ '</strong>, You have a <strong> High Risk</strong>.';
                 result = result+ 'Immediately go to a health center / nearest hospital. Or call the covid19 hotline for further handling.'
             }
             $('.chatbox').append(finish).find('.item.finish .text').html(result);

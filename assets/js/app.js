@@ -43,8 +43,8 @@ $(function(){
                 '</div>'+
             '</div>'+
             '<div class="form-jawaban text-right">'+
-                '<button class="btn-yes btn btn-outline-info py-2 px-4 radius-50" type="button">Yes</button>'+
-                '<button class="btn-no btn btn-outline-info py-2 px-4 radius-50 ml-2" type="button">No</button>'+
+                '<button class="btn-no btn btn-outline-info py-2 px-4 radius-50" type="button">No</button>'+
+                '<button class="btn-yes btn btn-outline-info py-2 px-4 radius-50 ml-2" type="button">Yes</button>'+
             '</div>'+
         '</div>';
 
@@ -62,7 +62,7 @@ $(function(){
                 '</div>'+
             '</div>'+
             '<div class="form-jawaban text-right mt-5" style="display:none">'+
-                '<button class="btn-start-over btn btn-outline-info py-2 px-4 radius-50 ml-2" type="button">Repeat again</button>'+
+                '<button class="btn-start-over btn btn-outline-info py-2 px-4 radius-50 ml-2" type="button">Repeat Again</button>'+
             '</div>'+
         '</div>';
 
@@ -88,11 +88,11 @@ $(function(){
             var point = question[index - 1].point;
 
             if(point == 1){
-                if(button == 'Yes'){
+                if(button == 'yes'){
                     total = total+1
                 }
             } else{
-                if(button == 'No'){
+                if(button == 'no'){
                     total = total+1
                 }
             }
@@ -101,15 +101,15 @@ $(function(){
         } else{
             var nama = $('input[name="nama"]').val();
             if(total < 8){
-                result = '<strong>'+nama+ '</strong>, You have a <strong> Low Risk</strong>.';
+                result = '<strong>'+nama+ '</strong>, you have <strong> Low Risk </strong>.';
                 result = result+ 'Keep healthy, okay. and if this step can become a daily habit, it certainly helps change healthy lifestyles from the effects of this post pandemic COVID19.'
             }
             if(total > 7 && total < 15){
-                result = '<strong>'+nama+ '</strong>,You have a <strong> Medium Risk</strong>.';
+                result = '<strong>'+nama+ '</strong>, you have a <strong> Medium Risk </strong>.';
                 result = result+ 'Do isolation immediately. keep healthy.'
             }
             if(total > 14 && total < 22){
-                result = '<strong>'+nama+ '</strong>, You have a <strong> High Risk</strong>.';
+                result = '<strong>'+nama+ '</strong>, you have a <strong> High Risk </strong>.';
                 result = result+ 'Immediately go to a health center / nearest hospital. Or call the covid19 hotline for further handling.'
             }
             $('.chatbox').append(finish).find('.item.finish .text').html(result);

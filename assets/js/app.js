@@ -43,8 +43,8 @@ $(function(){
                 '</div>'+
             '</div>'+
             '<div class="form-jawaban text-right">'+
-                '<button class="btn-no btn btn-outline-info py-2 px-4 radius-50" type="button">No</button>'+
                 '<button class="btn-yes btn btn-outline-info py-2 px-4 radius-50 ml-2" type="button">Yes</button>'+
+                '<button class="btn-no btn btn-outline-info py-2 px-4 radius-50" type="button">No</button>'+
             '</div>'+
         '</div>';
 

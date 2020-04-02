@@ -15,12 +15,12 @@ $(function(){
 
     var total = 0;
     
-    $(document).on('click','.btn-no',function(){
-        typingText($(this),'no');
-    });
-
     $(document).on('click','.btn-yes',function(){
         typingText($(this),'yes');
+    });
+
+    $(document).on('click','.btn-no',function(){
+        typingText($(this),'no');
     });
     
     $(document).on('click','.btn-start-over',function(){
@@ -88,11 +88,11 @@ $(function(){
             var point = question[index - 1].point;
 
             if(point == 1){
-                if(button == 'No'){
+                if(button == 'Yes'){
                     total = total+1
                 }
             } else{
-                if(button == 'Yes'){
+                if(button == 'No'){
                     total = total+1
                 }
             }
